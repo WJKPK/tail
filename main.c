@@ -5,9 +5,8 @@
 int main (int argc, char* argv[])
 {
 
-		int amount = (atoi(argv[1])+1);
+		const int amount = (atoi(argv[1]));
 		char* circBuf = malloc(sizeof(char)*amount);
-		circBuf[amount-1]='\0';
 
 		if (stdin == NULL){
 				printf("Operacja się nie udała");
@@ -19,7 +18,7 @@ int main (int argc, char* argv[])
 				 char letter = (char)getchar();
 				 while( letter != EOF )
 					 {
-					 if (counter >= amount-1)
+					 if (counter >= amount)
 						 	 counter = 0;
 					 	circBuf[counter]=letter;
 						letter = getchar();
